@@ -46,6 +46,7 @@ body {
     #homepage {
         background-image: url(../assets/images/ihkgii5ucqelpnud9l-1705473351328.jpg);
         display: flex;
+        position: relative;
         header {
             height: 10%;
             padding: 0 24px;
@@ -59,6 +60,25 @@ body {
             #header__misc {
                 width: 10%;
             }
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          bottom: 3px;
+          right: 8px;
+          width: 52px;
+          height: 50px;
+          background-image: url(../assets/images/scroll.png);
+          background-size: contain;
+          animation: scrollUpDown 4s ease-in-out infinite;
+        }
+        @keyframes scrollUpDown {
+          0%, 100% {
+            transform: translateY(0); /* Starting and ending position */
+          }
+          50% {
+            transform: translateY(-10px); /* Move upward by 10px at midpoint */
+          }
         }
     }
     #endpage {
@@ -97,6 +117,9 @@ body {
             border: none;
             font-size: 12px;
             transition: 500ms;
+            &:not(&.nav-button--active):hover {
+              opacity: 0.5;
+            }
             &.nav-button--active {
                 color: $main-color;
                 position: relative;
@@ -115,6 +138,7 @@ body {
                     background-repeat: no-repeat;
                     height: 110%;
                     width: 100px;
+                    pointer-events: none;
                 }
                 &::after {
                     position: absolute;
@@ -127,6 +151,7 @@ body {
                     background-repeat: no-repeat;
                     height: 110%;
                     width: 100px;
+                    pointer-events: none;
                 }
             }
         }
