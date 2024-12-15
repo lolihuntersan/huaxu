@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'lagu-sans';
+    src: url(../assets/fonts/LaguSansBold.otf);
+}
+
+@font-face {
+    font-family: 'ciutadella';
+    src: url(../assets/fonts/CiutadellaRoundedTRIAL-Lt-BF6736b92219749.otf);
+}
+
+$main-color: #d2ae78;
+
+* {
+    box-sizing: border-box;
+    font-family: 'lagu-sans';
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/role-bg-205b0c72.jpg);
+    &::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
+    }
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+    section.pages {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/role-bg-205b0c72.jpg);
+        display: none;
+    }
+    #homepage {
+        background-image: url(../assets/images/ihkgii5ucqelpnud9l-1705473351328.jpg);
+        display: flex;
+        header {
+            height: 10%;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            #header__banner {
+                height: 35%;
+            }
+            #header__misc {
+                width: 10%;
+            }
+        }
+    }
+    #endpage {
+        padding: 96px 48px 8px 48px;
+        background-image: url(../assets/images/end-bg-0e4e686f.jpg);
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        #tag-line {
+            display: block;
+            width: 50%;
+            color: rgb(250, 250, 250);
+            font-size: 48px;
+            span {
+                font-family: 'ciutadella';
+            }
+        }
+    }
+    #header__navigation {
+        position: fixed;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        button.navigation__buttons {
+            height: 31px;
+            margin: 0 12px;
+            padding: 12px 8px 0 8px;
+            color: rgb(250, 250, 250);
+            background: none;
+            border: none;
+            font-size: 12px;
+            transition: 500ms;
+            &.nav-button--active {
+                color: $main-color;
+                position: relative;
+                background-image: url(../assets/images/active_nav--middle.png);
+                background-position: top;
+                background-size: 100% 34px;
+                background-repeat: no-repeat;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    transform: translateX(-100%);
+                    background-image: url(../assets/images/active_nav--left.png);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    height: 110%;
+                    width: 100px;
+                }
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    content: '';
+                    transform: translateX(100%);
+                    background-image: url(../assets/images/active_nav--right.png);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    height: 110%;
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////
+.glitch {
+    position: relative;
+  }
+  
+  .line {
+    &:not(:first-child) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation:
+          clip 3000ms $i * -300ms linear infinite,
+          glitch#{$i} 500ms random(1000) * -1ms linear infinite;
+  
+        @keyframes glitch#{$i} {
+          0% {
+            transform: translateX(0);
+          }
+          80% {
+            transform: translateX(0);
+            color: #fff;
+          }
+          85% {
+            transform: translateX(random(10) - 5px);
+            color: #4E9A26;
+          }
+          90% {
+            transform: translateX(random(10) - 5px);
+            color: #AC1212;
+          }
+          95% {
+            transform: translateX(random(10) - 5px);
+            color: #fff;
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes clip {
+    0% {
+      clip-path: polygon(
+        0 100%,
+        100% 100%,
+        100% 120%,
+        0 120%
+      );
+    }
+    
+    100% {
+      clip-path: polygon(
+        0 -20%,
+        100% -20%,
+        100% 0%,
+        0 0
+      );
+    }
+  }
+  
