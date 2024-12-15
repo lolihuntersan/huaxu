@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     navButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             if (!isTransitioning && currentPage !== index) {
+                console.log(button.innerHTML);
+                console.log(index);
                 transitionToPage(index); // Navigate to the clicked button's page
             }
         });
