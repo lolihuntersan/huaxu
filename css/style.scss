@@ -66,6 +66,7 @@ body {
           object-fit: cover;
           z-index: 0;
           pointer-events: none;
+          user-select: none;
         }
         #homepage-content {
           display: flex;
