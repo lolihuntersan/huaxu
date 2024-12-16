@@ -96,6 +96,7 @@ body #homepage::before {
   background-image: url(../assets/images/scroll.png);
   background-size: contain;
   animation: scrollUpDown 4s ease-in-out infinite;
+  z-index: 1;
 }
 @keyframes scrollUpDown {
   0%, 100% {
@@ -212,7 +213,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   left: 0;
 }
 .glitch .line:nth-child(1) {
-  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -57ms linear infinite;
+  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -952ms linear infinite;
 }
 @keyframes glitch1 {
   0% {
@@ -223,7 +224,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(4px);
+    transform: translateX(-3px);
     color: #4E9A26;
   }
   90% {
@@ -231,7 +232,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #AC1212;
   }
   95% {
-    transform: translateX(0px);
+    transform: translateX(1px);
     color: #fff;
   }
   100% {
@@ -239,7 +240,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(2) {
-  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -680ms linear infinite;
+  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -256ms linear infinite;
 }
 @keyframes glitch2 {
   0% {
@@ -254,34 +255,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(4px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(-4px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(3) {
-  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -449ms linear infinite;
-}
-@keyframes glitch3 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(-2px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(-1px);
+    transform: translateX(3px);
     color: #AC1212;
   }
   95% {
@@ -292,8 +266,35 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     transform: translateX(0);
   }
 }
+.glitch .line:nth-child(3) {
+  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -770ms linear infinite;
+}
+@keyframes glitch3 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-3px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(-1px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-3px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .glitch .line:nth-child(4) {
-  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -356ms linear infinite;
+  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -24ms linear infinite;
 }
 @keyframes glitch4 {
   0% {
@@ -304,11 +305,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-1px);
+    transform: translateX(0px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-4px);
+    transform: translateX(5px);
     color: #AC1212;
   }
   95% {
@@ -320,7 +321,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(5) {
-  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -353ms linear infinite;
+  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -915ms linear infinite;
 }
 @keyframes glitch5 {
   0% {
@@ -331,15 +332,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(0px);
+    transform: translateX(-1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(1px);
+    transform: translateX(2px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-1px);
+    transform: translateX(4px);
     color: #fff;
   }
   100% {
@@ -347,7 +348,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(6) {
-  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -123ms linear infinite;
+  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -354ms linear infinite;
 }
 @keyframes glitch6 {
   0% {
@@ -358,15 +359,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(3px);
+    transform: translateX(1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-4px);
+    transform: translateX(2px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(3px);
+    transform: translateX(4px);
     color: #fff;
   }
   100% {
@@ -374,7 +375,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(7) {
-  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -944ms linear infinite;
+  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -139ms linear infinite;
 }
 @keyframes glitch7 {
   0% {
@@ -385,15 +386,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(0px);
+    transform: translateX(-1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-2px);
+    transform: translateX(-3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(1px);
+    transform: translateX(3px);
     color: #fff;
   }
   100% {
@@ -401,7 +402,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(8) {
-  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -540ms linear infinite;
+  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -150ms linear infinite;
 }
 @keyframes glitch8 {
   0% {
@@ -412,15 +413,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(0px);
+    transform: translateX(3px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(5px);
+    transform: translateX(-1px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(5px);
+    transform: translateX(-3px);
     color: #fff;
   }
   100% {
@@ -428,7 +429,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(9) {
-  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -646ms linear infinite;
+  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -208ms linear infinite;
 }
 @keyframes glitch9 {
   0% {
@@ -439,15 +440,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-2px);
+    transform: translateX(4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(0px);
+    transform: translateX(5px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(1px);
+    transform: translateX(-2px);
     color: #fff;
   }
   100% {
@@ -455,7 +456,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(10) {
-  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -543ms linear infinite;
+  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -681ms linear infinite;
 }
 @keyframes glitch10 {
   0% {
@@ -466,11 +467,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(3px);
+    transform: translateX(-4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(3px);
+    transform: translateX(1px);
     color: #AC1212;
   }
   95% {
