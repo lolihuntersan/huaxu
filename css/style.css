@@ -86,6 +86,24 @@ body #homepage #homepage-content header #header__banner {
 body #homepage #homepage-content header #header__misc {
   width: 10%;
 }
+body #homepage #homepage-content #huaxu-icon {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+}
+body #homepage #homepage-content #feedback {
+  padding: 3px 8px 3px 16px;
+  position: absolute;
+  bottom: 25%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border: solid 1px #d2ae78;
+  color: #d2ae78;
+}
 body #homepage #homepage-content #homepage__access {
   position: absolute;
   top: 70%;
@@ -116,6 +134,29 @@ body #homepage #homepage-content #homepage__access #qr #img-container {
 }
 body #homepage #homepage-content #homepage__access #buttons {
   width: 65%;
+}
+body #homepage #homepage-content #homepage__access #buttons button {
+  position: relative;
+  margin: 0;
+  background-color: #0D0D0D;
+  background-image: linear-gradient(180deg, rgba(2, 0, 36, 0) 68%, rgba(210, 174, 120, 0.4388130252) 100%);
+  border: none;
+  border-radius: 5px;
+  height: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  transition: 200ms;
+}
+body #homepage #homepage-content #homepage__access #buttons button:hover {
+  background-color: rgba(210, 174, 120, 0.9);
+  color: #0D0D0D;
+}
+body #homepage #homepage-content #homepage__access #buttons button:active {
+  transform: scale(0.9);
+}
+body #homepage #homepage-content #homepage__access #buttons button:first-child {
+  margin-bottom: 5px;
 }
 body #homepage #homepage-content #socials-homepage {
   position: absolute;
@@ -253,7 +294,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   left: 0;
 }
 .glitch .line:nth-child(1) {
-  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -330ms linear infinite;
+  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -115ms linear infinite;
 }
 @keyframes glitch1 {
   0% {
@@ -264,15 +305,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-1px);
+    transform: translateX(-3px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-4px);
+    transform: translateX(4px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(2px);
+    transform: translateX(-2px);
     color: #fff;
   }
   100% {
@@ -280,7 +321,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(2) {
-  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -753ms linear infinite;
+  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -999ms linear infinite;
 }
 @keyframes glitch2 {
   0% {
@@ -291,15 +332,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-4px);
+    transform: translateX(1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-3px);
+    transform: translateX(3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-1px);
+    transform: translateX(5px);
     color: #fff;
   }
   100% {
@@ -307,7 +348,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(3) {
-  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -408ms linear infinite;
+  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -139ms linear infinite;
 }
 @keyframes glitch3 {
   0% {
@@ -318,11 +359,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(2px);
+    transform: translateX(1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-2px);
+    transform: translateX(-3px);
     color: #AC1212;
   }
   95% {
@@ -334,7 +375,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(4) {
-  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -890ms linear infinite;
+  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -343ms linear infinite;
 }
 @keyframes glitch4 {
   0% {
@@ -345,15 +386,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-1px);
+    transform: translateX(5px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(3px);
+    transform: translateX(4px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(4px);
+    transform: translateX(-1px);
     color: #fff;
   }
   100% {
@@ -361,7 +402,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(5) {
-  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -420ms linear infinite;
+  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -200ms linear infinite;
 }
 @keyframes glitch5 {
   0% {
@@ -372,15 +413,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(1px);
+    transform: translateX(-3px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(0px);
+    transform: translateX(1px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-2px);
+    transform: translateX(1px);
     color: #fff;
   }
   100% {
@@ -388,7 +429,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(6) {
-  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -856ms linear infinite;
+  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -407ms linear infinite;
 }
 @keyframes glitch6 {
   0% {
@@ -399,15 +440,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(2px);
+    transform: translateX(0px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-4px);
+    transform: translateX(3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-4px);
+    transform: translateX(4px);
     color: #fff;
   }
   100% {
@@ -415,63 +456,9 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(7) {
-  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -377ms linear infinite;
+  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -195ms linear infinite;
 }
 @keyframes glitch7 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(4px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(2px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(3px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(8) {
-  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -151ms linear infinite;
-}
-@keyframes glitch8 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(1px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(2px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(3px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(9) {
-  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -834ms linear infinite;
-}
-@keyframes glitch9 {
   0% {
     transform: translateX(0);
   }
@@ -484,7 +471,34 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
+    transform: translateX(2px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(4px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.glitch .line:nth-child(8) {
+  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -708ms linear infinite;
+}
+@keyframes glitch8 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
     transform: translateX(-2px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(-3px);
     color: #AC1212;
   }
   95% {
@@ -495,8 +509,35 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     transform: translateX(0);
   }
 }
+.glitch .line:nth-child(9) {
+  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -560ms linear infinite;
+}
+@keyframes glitch9 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(3px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(-4px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(0px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .glitch .line:nth-child(10) {
-  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -832ms linear infinite;
+  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -291ms linear infinite;
 }
 @keyframes glitch10 {
   0% {
@@ -507,15 +548,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(2px);
+    transform: translateX(-3px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(2px);
+    transform: translateX(-3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(2px);
+    transform: translateX(1px);
     color: #fff;
   }
   100% {

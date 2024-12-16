@@ -87,6 +87,24 @@ body {
                 width: 10%;
             }                
           }
+          #huaxu-icon {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            width: 200px;
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+          }
+          #feedback {
+            padding: 3px 8px 3px 16px;
+            position: absolute;
+            bottom: 25%;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+            border: solid 1px #d2ae78;
+            color: #d2ae78;
+          }
           #homepage__access {
             position: absolute;
             top: 70%;
@@ -116,6 +134,29 @@ body {
             }
             #buttons {
               width: 65%;
+              button {
+                position: relative;
+                margin: 0;
+                background-color: #0D0D0D;
+                background-image: linear-gradient(180deg, rgba(2,0,36,0) 68%, rgba(210,174,120,0.43881302521008403) 100%);
+                border: none;
+                border-radius: 5px;
+                height: 50%;
+                width: 100%;
+                color: #fff;
+                font-size: 18px;
+                transition: 200ms;
+                &:hover {
+                  background-color: rgba(210, 174, 120, 0.9);
+                  color: #0D0D0D;
+                }
+                &:active {
+                  transform: scale(0.9);
+                }
+                &:first-child {
+                  margin-bottom: 5px;
+                }
+              }
             }
           }
           #socials-homepage {
