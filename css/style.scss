@@ -83,20 +83,13 @@ body {
     }
     #departments {
       position: relative;
-      #video-container {
+      #video {
         position: absolute;
         bottom: 0;
-        left: 0;
         width: 100%;
-        height: auto;
-        #canvas {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: auto;
-          z-index: 1;
-        }
+        height: 10%;
+        object-fit: cover;
+        mix-blend-mode: screen;
       }
     }
     #endpage {

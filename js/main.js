@@ -17,6 +17,7 @@ pages.forEach((page, index) => {
     page.style.left = '0'; // Align all pages to the left
     page.style.width = '100%'; // Full width for each page
     page.style.height = '100vh'; // Full height for each page
+    page.style.pointerEvents = index === currentPage ? 'auto' : 'none'; // Enable interaction only for the current page
 });
 
 // Transition to a page
@@ -38,21 +39,24 @@ function transitionToPage(value, type = "direction") {
         isTransitioning = true; // Block further transitions
         // Fade out the current page
         pages[lastPage].style.opacity = '0';
+        pages[lastPage].style.pointerEvents = 'none'; // Disable interaction with the last page
 
         // Fade in the next page
         setTimeout(() => {
             pages[currentPage].style.opacity = '1';
+            pages[currentPage].style.pointerEvents = 'auto'; // Enable interaction with the current page
             isTransitioning = false; // Allow new transitions
 
             // Set active class on the corresponding navigation button
             navButtons.forEach(button => button.classList.remove('nav-button--active')); // Remove active class from all buttons
             navButtons[currentPage].classList.add('nav-button--active'); // Add active class to the current page button
-        }, 100); // Match the fade transition duration (0.5s)
+        }, 50); // Match the fade transition duration (0.5s)
     } else {
         // If no page change, allow transitions again
         isTransitioning = false;
     }
 }
+
 
 // Handle navigation button clicks
 navButtons.forEach((button, index) => {
