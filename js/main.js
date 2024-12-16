@@ -48,6 +48,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize by showing the first card
     showCard(currentIndex);
+
+
+    document.body.addEventListener('change', function (event) {
+        // Check if the event was triggered by a dynamically created rating input
+        if (event.target.matches('.rating input[type="radio"]')) {
+            const selectedValue = event.target.value; // Get the selected radio value
+
+            // Loop through all dynamically added .rating elements
+            document.querySelectorAll('.rating').forEach(ratingDiv => {
+                const input = ratingDiv.querySelector('input[type="radio"]'); // Get the input inside the .rating
+                const label = ratingDiv.querySelector('label'); // Get the label inside the .rating
+
+                if (input.value <= selectedValue) {
+                    label.style.backgroundColor = '#d2ae78'; // Set color for lower or equal to selected
+                } else {
+                    label.style.backgroundColor = '#fff'; // Set color for higher values
+                }
+            });
+        }
+    });
+
 });
 
 ////////////
@@ -166,3 +187,84 @@ function removeBlack() {
 video.addEventListener('play', () => {
   removeBlack();
 });
+
+function createPopupForm() {
+    // Create the popup container
+    const popupContainer = document.createElement('div');
+    popupContainer.id = 'popup-form__container';
+
+    // Add form content inside the container
+    popupContainer.innerHTML = `
+        <form id="popup-form__form">
+            <span id="popup-form__header">Feedback and Suggestions</span>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+            <textarea placeholder="Comments and feedback."></textarea>
+            <div class="ratings">
+                <div class="rating">5<label><input name="star" value="5" type="radio"></label></div>
+                <div class="rating">4<label><input name="star" value="4" type="radio"></label></div>
+                <div class="rating">3<label><input name="star" value="3" type="radio"></label></div>
+                <div class="rating">2<label><input name="star" value="2" type="radio"></label></div>
+                <div class="rating">1<label><input name="star" value="1" type="radio"></label></div>
+            </div>
+            <div class="ratings">
+                <div class="rating">Leave a like<label><i class="lni lni-thumbs-up-3"></i><input type="checkbox"></label></div>
+            </div>
+            <input type="submit" value="Send Feedback">
+        </form>
+    `;
+
+    // Append the popup as the first child of the body
+    document.body.prepend(popupContainer);
+
+    // Add event listener to close the popup on clicking the container
+    popupContainer.addEventListener('click', function (event) {
+        if (event.target === popupContainer) {
+            popupContainer.remove();
+        }
+    });
+
+    // Prevent default submission and close the popup on form submit
+    const form = popupContainer.querySelector('#popup-form__form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        popupContainer.remove();
+    });
+}
+
+function createPopupFormEnroll() {
+    // Create the popup container
+    const popupContainer = document.createElement('div');
+    popupContainer.id = 'popup-form__container';
+
+    // Add form content inside the container
+    popupContainer.innerHTML = `
+        <form id="popup-form__form">
+            <span id="popup-form__header">Enrollment Request</span>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Middle Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Home Address">
+            <input type="email" placeholder="Email Address">
+            <span id="enroll-req">An official will contact you upon sending request for enrollment.</span>
+            <input type="submit" value="Send Request">
+        </form>
+    `;
+
+    // Append the popup as the first child of the body
+    document.body.prepend(popupContainer);
+
+    // Add event listener to close the popup on clicking the container
+    popupContainer.addEventListener('click', function (event) {
+        if (event.target === popupContainer) {
+            popupContainer.remove();
+        }
+    });
+
+    // Prevent default submission and close the popup on form submit
+    const form = popupContainer.querySelector('#popup-form__form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        popupContainer.remove();
+    });
+}

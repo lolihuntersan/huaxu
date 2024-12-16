@@ -29,6 +29,103 @@ body {
   background-repeat: no-repeat;
   background-image: url(../assets/images/role-bg-205b0c72.jpg);
 }
+body #popup-form__container {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #popup-form__container #popup-form__form {
+  width: 340px;
+  background: url(../assets/images/role-bg-205b0c72.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 24px 12px;
+  color: #d2ae78;
+  border-radius: 4px;
+  border-bottom: solid 2px #d2ae78;
+  border-top: solid 2px #d2ae78;
+}
+body #popup-form__container #popup-form__form span {
+  text-align: center;
+  font-size: 20px;
+}
+body #popup-form__container #popup-form__form #enroll-req {
+  font-size: 12px;
+}
+body #popup-form__container #popup-form__form span, body #popup-form__container #popup-form__form input, body #popup-form__container #popup-form__form textarea {
+  width: 100%;
+  margin: 8px 0;
+}
+body #popup-form__container #popup-form__form input, body #popup-form__container #popup-form__form textarea {
+  padding: 8px;
+  background: none;
+  color: #fff;
+  border: solid 1px #d2ae78;
+  border-radius: 3px;
+}
+body #popup-form__container #popup-form__form input:not([type=submit]), body #popup-form__container #popup-form__form textarea:not([type=submit]) {
+  font-family: "ciutadella-lt";
+}
+body #popup-form__container #popup-form__form input::placeholder, body #popup-form__container #popup-form__form textarea::placeholder {
+  color: #fff;
+}
+body #popup-form__container #popup-form__form textarea {
+  height: 80px;
+}
+body #popup-form__container #popup-form__form button, body #popup-form__container #popup-form__form [type=submit] {
+  background-color: #d2ae78;
+  color: #0D0D0D;
+  transition: 200ms;
+}
+body #popup-form__container #popup-form__form button:hover, body #popup-form__container #popup-form__form [type=submit]:hover {
+  opacity: 0.75;
+}
+body #popup-form__container #popup-form__form button:active, body #popup-form__container #popup-form__form [type=submit]:active {
+  transform: scale(0.95);
+}
+body #popup-form__container #popup-form__form .ratings {
+  display: flex;
+  flex-direction: row;
+}
+body #popup-form__container #popup-form__form .ratings .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+}
+body #popup-form__container #popup-form__form .ratings .rating label:has([type=radio]) {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  transition: 200ms;
+}
+body #popup-form__container #popup-form__form .ratings .rating label:has([type=radio]) [type=radio] {
+  display: none;
+}
+body #popup-form__container #popup-form__form .ratings .rating label:has([type=radio]):has([type=radio]:checked) {
+  background-color: #d2ae78;
+}
+body #popup-form__container #popup-form__form .ratings .rating label:has([type=checkbox]) {
+  transition: 200ms;
+  font-size: 24px;
+  color: #fff;
+}
+body #popup-form__container #popup-form__form .ratings .rating label:has([type=checkbox]) [type=checkbox] {
+  display: none;
+}
+body #popup-form__container #popup-form__form .ratings .rating label:has([type=checkbox]:checked) {
+  color: #d2ae78;
+}
 body::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
 }
@@ -107,6 +204,15 @@ body #homepage #homepage-content #feedback {
   background: rgba(0, 0, 0, 0.3);
   border: solid 1px #d2ae78;
   color: #d2ae78;
+  transition: 200ms;
+}
+body #homepage #homepage-content #feedback:hover {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+body #homepage #homepage-content #feedback:active {
+  opacity: 0.75;
+  transform: scale(0.95);
 }
 body #homepage #homepage-content #homepage__access {
   position: absolute;
@@ -406,7 +512,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   left: 0;
 }
 .glitch .line:nth-child(1) {
-  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -628ms linear infinite;
+  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -574ms linear infinite;
 }
 @keyframes glitch1 {
   0% {
@@ -417,11 +523,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-2px);
+    transform: translateX(4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(1px);
+    transform: translateX(0px);
     color: #AC1212;
   }
   95% {
@@ -433,7 +539,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(2) {
-  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -793ms linear infinite;
+  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -617ms linear infinite;
 }
 @keyframes glitch2 {
   0% {
@@ -444,7 +550,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(1px);
+    transform: translateX(-1px);
     color: #4E9A26;
   }
   90% {
@@ -452,7 +558,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #AC1212;
   }
   95% {
-    transform: translateX(4px);
+    transform: translateX(2px);
     color: #fff;
   }
   100% {
@@ -460,7 +566,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(3) {
-  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -34ms linear infinite;
+  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -647ms linear infinite;
 }
 @keyframes glitch3 {
   0% {
@@ -475,11 +581,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-1px);
+    transform: translateX(-4px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-1px);
+    transform: translateX(2px);
     color: #fff;
   }
   100% {
@@ -487,7 +593,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(4) {
-  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -338ms linear infinite;
+  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -964ms linear infinite;
 }
 @keyframes glitch4 {
   0% {
@@ -498,7 +604,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-3px);
+    transform: translateX(2px);
     color: #4E9A26;
   }
   90% {
@@ -506,7 +612,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #AC1212;
   }
   95% {
-    transform: translateX(-1px);
+    transform: translateX(0px);
     color: #fff;
   }
   100% {
@@ -514,7 +620,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(5) {
-  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -917ms linear infinite;
+  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -272ms linear infinite;
 }
 @keyframes glitch5 {
   0% {
@@ -525,15 +631,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-3px);
+    transform: translateX(4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(5px);
+    transform: translateX(-4px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(5px);
+    transform: translateX(2px);
     color: #fff;
   }
   100% {
@@ -541,7 +647,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(6) {
-  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -297ms linear infinite;
+  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -740ms linear infinite;
 }
 @keyframes glitch6 {
   0% {
@@ -556,11 +662,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(3px);
+    transform: translateX(1px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(1px);
+    transform: translateX(2px);
     color: #fff;
   }
   100% {
@@ -568,9 +674,90 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(7) {
-  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -107ms linear infinite;
+  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -250ms linear infinite;
 }
 @keyframes glitch7 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(5px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(1px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(3px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.glitch .line:nth-child(8) {
+  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -87ms linear infinite;
+}
+@keyframes glitch8 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(5px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-3px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.glitch .line:nth-child(9) {
+  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -42ms linear infinite;
+}
+@keyframes glitch9 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(3px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(3px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-4px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.glitch .line:nth-child(10) {
+  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -389ms linear infinite;
+}
+@keyframes glitch10 {
   0% {
     transform: translateX(0);
   }
@@ -583,92 +770,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(5px);
+    transform: translateX(1px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-2px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(8) {
-  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -451ms linear infinite;
-}
-@keyframes glitch8 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(4px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(4px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(-3px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(9) {
-  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -944ms linear infinite;
-}
-@keyframes glitch9 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(5px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(-2px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(4px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(10) {
-  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -363ms linear infinite;
-}
-@keyframes glitch10 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(2px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(-1px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(4px);
+    transform: translateX(-4px);
     color: #fff;
   }
   100% {

@@ -33,6 +33,103 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../assets/images/role-bg-205b0c72.jpg);
+    #popup-form__container {
+      position: absolute;
+      inset: 0;
+      height: 100vh;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      #popup-form__form {
+          width: 340px;
+          background: url(../assets/images/role-bg-205b0c72.jpg);
+          background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          padding: 24px 12px;
+          color: #d2ae78;
+          border-radius: 4px;
+          border-bottom: solid 2px #d2ae78;
+          border-top: solid 2px #d2ae78;
+          span {
+            text-align: center;
+            font-size: 20px;
+          }
+          #enroll-req {
+            font-size: 12px;
+          }
+          span, input, textarea {
+            width: 100%;
+            margin: 8px 0;
+          }
+          input, textarea {
+            padding: 8px;
+            background: none;
+            color: #fff;
+            border: solid 1px #d2ae78;
+            border-radius: 3px;
+            &:not([type=submit]) {
+              font-family: 'ciutadella-lt';
+            }
+            &::placeholder {
+              color: #fff;
+            }
+          }
+          textarea {
+            height: 80px;
+          }
+          button, [type=submit] {
+            background-color: #d2ae78;
+            color: #0D0D0D;
+            transition: 200ms;
+            &:hover {
+              opacity: 0.75;
+            }
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+          .ratings {
+            display: flex;
+            flex-direction: row;
+            .rating {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin: 0 8px;
+              label:has([type=radio]) {
+                [type=radio] {
+                  display: none;
+                }
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                transition: 200ms;
+                &:has([type=radio]:checked) {
+                  background-color: #d2ae78;
+                }
+              }
+              label:has([type=checkbox]) {
+                transition: 200ms;
+                font-size: 24px;
+                color: #fff;
+                [type=checkbox] {
+                  display: none;
+                }
+              }
+              label:has([type=checkbox]:checked) {
+                color: #d2ae78;
+              }
+            }
+          }
+      }
+    }
     &::-webkit-scrollbar {
         display: none; /* For Chrome, Safari, and Edge */
     }
@@ -109,6 +206,15 @@ body {
             background: rgba(0, 0, 0, 0.3);
             border: solid 1px #d2ae78;
             color: #d2ae78;
+            transition: 200ms;
+            &:hover {
+              opacity: 0.75;
+              transform: scale(1.05);
+            }
+            &:active {
+              opacity: 0.75;
+              transform: scale(0.95);
+            }
           }
           #homepage__access {
             position: absolute;
