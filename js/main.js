@@ -1,6 +1,56 @@
 const $ = (el) => { return document.querySelector(el); };
 const $all = (el) => { return document.querySelectorAll(el); };
+///////////////
 
+document.addEventListener('DOMContentLoaded', function () {
+    const cardsContainer = document.querySelector('#cards');
+    const cards = document.querySelectorAll('.card');
+    const leftBtn = document.querySelector('#left');
+    const rightBtn = document.querySelector('#right');
+
+    let currentIndex = 0; // Declare and initialize currentIndex
+
+    // Show the current card
+    function showCard(index) {
+        // Hide all cards
+        cards.forEach((card) => {
+            card.classList.remove('active-card'); // Reset active class
+        });
+        
+        // Show the selected card
+        cards[index].classList.add('active-card');
+        
+        // Update data attributes to corresponding elements
+        const dept = document.querySelector('#dept');
+        const desc = document.querySelector('#desc');
+        const discipline = document.querySelector('#discipline');
+        
+        dept.textContent = cards[index].getAttribute('data-dept');
+        desc.textContent = cards[index].getAttribute('data-desc');
+        discipline.textContent = cards[index].getAttribute('data-discipline');
+    }
+
+    // Move to the next card
+    function nextCard() {
+        currentIndex = (currentIndex + 1) % cards.length;
+        showCard(currentIndex);
+    }
+
+    // Move to the previous card
+    function prevCard() {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        showCard(currentIndex);
+    }
+
+    // Event listeners for buttons
+    rightBtn.addEventListener('click', nextCard);
+    leftBtn.addEventListener('click', prevCard);
+
+    // Initialize by showing the first card
+    showCard(currentIndex);
+});
+
+////////////
 const pages = $all('.pages'); // Select all sections
 const navButtons = $all('.navigation__buttons'); // Select all navigation buttons
 let currentPage = 0; // Keeps track of the current page index
