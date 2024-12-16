@@ -78,11 +78,27 @@ body #homepage::before {
     transform: translateY(-10px); /* Move upward by 10px at midpoint */
   }
 }
+body #departments {
+  position: relative;
+}
+body #departments #video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+body #departments #video-container #canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
 body #endpage {
   padding: 96px 48px 8px 48px;
+  position: relative;
   background-image: url(../assets/images/end-bg-0e4e686f.jpg);
   display: flex;
-  align-items: start;
   flex-direction: column;
 }
 body #endpage #tag-line {
@@ -93,6 +109,14 @@ body #endpage #tag-line {
 }
 body #endpage #tag-line span {
   font-family: "ciutadella";
+}
+body #endpage #socials {
+  position: absolute;
+  bottom: 8%;
+  font-size: 36px;
+}
+body #endpage #socials a {
+  color: rgb(250, 250, 250);
 }
 body #header__navigation {
   position: fixed;
@@ -165,7 +189,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   left: 0;
 }
 .glitch .line:nth-child(1) {
-  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -349ms linear infinite;
+  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -391ms linear infinite;
 }
 @keyframes glitch1 {
   0% {
@@ -176,11 +200,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(3px);
+    transform: translateX(-4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-4px);
+    transform: translateX(4px);
     color: #AC1212;
   }
   95% {
@@ -192,7 +216,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(2) {
-  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -19ms linear infinite;
+  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -787ms linear infinite;
 }
 @keyframes glitch2 {
   0% {
@@ -203,65 +227,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(-4px);
+    transform: translateX(4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-1px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(5px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(3) {
-  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -660ms linear infinite;
-}
-@keyframes glitch3 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(-4px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(3px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(-4px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(4) {
-  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -381ms linear infinite;
-}
-@keyframes glitch4 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(5px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(-1px);
+    transform: translateX(0px);
     color: #AC1212;
   }
   95% {
@@ -272,8 +242,62 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     transform: translateX(0);
   }
 }
+.glitch .line:nth-child(3) {
+  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -649ms linear infinite;
+}
+@keyframes glitch3 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(2px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(0px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.glitch .line:nth-child(4) {
+  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -36ms linear infinite;
+}
+@keyframes glitch4 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(5px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-4px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .glitch .line:nth-child(5) {
-  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -686ms linear infinite;
+  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -359ms linear infinite;
 }
 @keyframes glitch5 {
   0% {
@@ -288,7 +312,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(2px);
+    transform: translateX(-4px);
     color: #AC1212;
   }
   95% {
@@ -300,7 +324,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(6) {
-  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -258ms linear infinite;
+  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -615ms linear infinite;
 }
 @keyframes glitch6 {
   0% {
@@ -315,7 +339,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-3px);
+    transform: translateX(5px);
     color: #AC1212;
   }
   95% {
@@ -327,7 +351,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(7) {
-  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -988ms linear infinite;
+  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -558ms linear infinite;
 }
 @keyframes glitch7 {
   0% {
@@ -338,15 +362,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(3px);
+    transform: translateX(2px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(0px);
+    transform: translateX(-2px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(5px);
+    transform: translateX(3px);
     color: #fff;
   }
   100% {
@@ -354,7 +378,7 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(8) {
-  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -372ms linear infinite;
+  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -711ms linear infinite;
 }
 @keyframes glitch8 {
   0% {
@@ -365,15 +389,15 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #fff;
   }
   85% {
-    transform: translateX(0px);
+    transform: translateX(5px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-4px);
+    transform: translateX(-2px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-2px);
+    transform: translateX(3px);
     color: #fff;
   }
   100% {
@@ -381,9 +405,36 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
   }
 }
 .glitch .line:nth-child(9) {
-  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -374ms linear infinite;
+  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -50ms linear infinite;
 }
 @keyframes glitch9 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-4px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(4px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(5px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.glitch .line:nth-child(10) {
+  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -714ms linear infinite;
+}
+@keyframes glitch10 {
   0% {
     transform: translateX(0);
   }
@@ -396,38 +447,11 @@ body #header__navigation button.navigation__buttons.nav-button--active::after {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(0px);
+    transform: translateX(2px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(4px);
-    color: #fff;
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.glitch .line:nth-child(10) {
-  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -806ms linear infinite;
-}
-@keyframes glitch10 {
-  0% {
-    transform: translateX(0);
-  }
-  80% {
-    transform: translateX(0);
-    color: #fff;
-  }
-  85% {
-    transform: translateX(3px);
-    color: #4E9A26;
-  }
-  90% {
-    transform: translateX(3px);
-    color: #AC1212;
-  }
-  95% {
-    transform: translateX(5px);
+    transform: translateX(-4px);
     color: #fff;
   }
   100% {

@@ -75,3 +75,40 @@ window.addEventListener('wheel', (event) => {
     const direction = event.deltaY > 0 ? 1 : -1; // Determine scroll direction
     transitionToPage(direction, "direction");
 });
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Adjust canvas size to match video
+video.addEventListener('loadeddata', () => {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+});
+
+// Process each frame of the video
+function removeBlack() {
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = frame.data;
+
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i];     // Red
+    const g = data[i + 1]; // Green
+    const b = data[i + 2]; // Blue
+
+    // Check if the pixel is black (or close to black)
+    if (r < 30 && g < 30 && b < 30) {
+      data[i + 3] = 0; // Set alpha to 0 (transparent)
+    }
+  }
+
+  ctx.putImageData(frame, 0, 0);
+  requestAnimationFrame(removeBlack);
+}
+
+// Start processing the video
+video.addEventListener('play', () => {
+  removeBlack();
+});
